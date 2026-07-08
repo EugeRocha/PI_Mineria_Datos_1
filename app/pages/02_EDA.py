@@ -145,7 +145,7 @@ colores = ['#5b9bd5', '#ed7d31', '#70ad47']
 fig, ax = plt.subplots(figsize=(8, 4))
 grupos = [df[df['subscription_plan'] == p]['monthly_watch_time_mins'].values
           for p in orden_plan]
-bp = ax.boxplot(grupos, labels=orden_plan, patch_artist=True)
+bp = ax.boxplot(grupos, label=orden_plan, patch_artist=True)
 for patch, color in zip(bp['boxes'], colores):
     patch.set_facecolor(color)
     patch.set_alpha(0.7)
